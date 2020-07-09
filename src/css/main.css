@@ -190,38 +190,6 @@ iframe {
   margin: 0 auto;
 }
 
-/* .container-login100 {
-  width: 100%;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-} */
-
-/* .container-login100::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1; 
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-} */
-
 .form-container {
   position: absolute;
   width: 500px;
@@ -242,7 +210,7 @@ iframe {
 .login-form {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .form-aside {
@@ -278,7 +246,7 @@ iframe {
 }
 
 .form-aside-desc p {
-  font-size: 2.5em;
+  font-size: 1rem;
   font-weight: 700;
   color: white;
   padding: 0px 20px;
@@ -295,8 +263,8 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 120px;
+  /* width: 120px;
+  height: 120px; */
   border-radius: 50%;
   /* background-color: #6aa23c; */
   margin: 0 auto;
@@ -304,7 +272,7 @@ iframe {
 
 .login-form-title {
   font-family: "Bitter", "Poppins", sans-serif;
-  font-size: 2.2rem;
+  font-size: 1rem;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
@@ -406,61 +374,6 @@ iframe {
   padding-left: 5px;
 }
 
-/*==================================================================
-[ Restyle Checkbox ]*/
-
-.contact100-form-checkbox {
-  padding-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 35px;
-}
-
-.input-checkbox100 {
-  display: none;
-}
-
-.label-checkbox100 {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-size: 0.8em;
-  line-height: 1.2;
-
-  display: block;
-  position: relative;
-  padding-left: 26px;
-  cursor: pointer;
-}
-
-.label-checkbox100::before {
-  content: "\f26b";
-  font-family: Material-Design-Iconic-Font;
-  font-size: 0.8em;
-  color: transparent;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  background: #fff;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.input-checkbox100:checked + .label-checkbox100::before {
-  color: #555555;
-}
-
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-form-inputs {
@@ -476,13 +389,6 @@ iframe {
   border-radius: 5px;
 }
 
-/* .login-form-btn:hover {
-  background: #78b943;
-  background: -webkit-linear-gradientgradient(left, #78b943, #456b26);
-  background: -o-linear-gradientgradient(left, #78b943, #456b26);
-  background: -moz-linear-gradientgradient(left, #78b943, #456b26);
-  background: linear-gradientgradient(left, #78b943, #456b26);
-} */
 .login-form-btn {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -512,29 +418,6 @@ iframe {
   color: white;
   background-color: #497227;
 }
-
-/* .login-form-btn::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  background-color: #fff;
-  top: 0;
-  left: 0;
-  opacity: 1;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.login-form-btn:hover:before {
-  opacity: 0;
-} */
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
@@ -642,7 +525,7 @@ iframe {
 
 /* Responsive */
 
-@media (max-width: 500px) {
+@media (max-width: 720px) {
   .alert-validate::before {
     visibility: visible;
     opacity: 1;
@@ -658,9 +541,12 @@ iframe {
     font-size: 12px;
   }
   .form-container {
-    width: 70%;
-    height: 500px;
-    overflow: scroll;
+    width: 60%;
+    /* height: 500px; */
+    /* overflow: scroll; */
+  }
+  .form-input {
+    padding: 0 0 0 20%;
   }
   .login-form-title {
     padding: 15px 5px;
@@ -692,11 +578,17 @@ iframe {
     overflow: scroll;
     padding: 55px 20px 37px 20px;
   }
+
+  .form-input {
+    padding: 0 0 0 10%;
+  }
+
   .login-form-title {
     padding: 30px 10px 50px 10px;
+    font-size: 2rem;
   }
   .form-aside-desc p {
-    /* font-size: 2em; */
+    font-size: 2em;
   }
 }
 
