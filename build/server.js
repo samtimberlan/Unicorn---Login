@@ -2,11 +2,11 @@ let express = require("express");
 let path = require("path");
 //import open from "open";
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 3031;
 const app = express();
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../src/index.html"), err => {
+  res.sendFile(path.join(__dirname, "../src/index.html"), (err) => {
     console.log(err);
   });
 });
